@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DACAPO - Répertoire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>DACAPO</h1>
+    </header>
+
+    <main>
+        <button id="ajouterPieceBtn" class="rounded-button">Ajouter une pièce</button>
+
+        <div id="formulairePiece" class="form-container hidden">
+            <h2>Ajouter une pièce au répertoire</h2>
+            <form id="pieceForm">
+                <div class="form-group">
+                    <label for="titre">Titre :</label>
+                    <input type="text" id="titre" name="titre" required>
+                </div>
+                <div class="form-group">
+                    <label for="compositeur">Compositeur :</label>
+                    <input type="text" id="compositeur" name="compositeur" required>
+                </div>
+                <div class="form-group">
+                    <label for="categorie">Catégorie :</label>
+                    <select id="categorie" name="categorie" required>
+                        <option value="Concerto">Concerto</option>
+                        <option value="Sonate">Sonate</option>
+                        <option value="Pièce solo">Pièce solo</option>
+                        <option value="Caprices/Etudes">Caprices/Etudes</option>
+                        <option value="Technique">Technique</option>
+                    </select>
+                </div>
+                <button type="submit" class="rounded-button primary">Enregistrer</button>
+                <button type="button" id="annulerAjout" class="rounded-button secondary">Annuler</button>
+            </form>
+        </div>
+
+        <div id="repertoire" class="repertoire-container">
+            <h2>Répertoire</h2>
+            <div id="categoriesRepertoire">
+                </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DACAPO - Votre répertoire musical</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
