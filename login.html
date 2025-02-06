@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DACAPO - Connexion</title>
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+</head>
+<body>
+    <header>
+        <h1>DACAPO - Connexion</h1>
+    </header>
+
+    <main class="login-container">
+        <div class="form-container">
+            <h2>Connexion</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="rounded-button primary">Se connecter</button>
+                <div id="errorMessage" class="error-message hidden"></div>
+            </form>
+
+            <div class="signup-link">
+                <p>Pas encore de compte ? <a href="#" id="signupLink">S'inscrire</a></p>
+            </div>
+        </div>
+
+        <div id="signupForm" class="form-container hidden">
+            <h2>Inscription</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="signupEmail">Email :</label>
+                    <input type="email" id="signupEmail" name="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Mot de passe :</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required>
+                </div>
+                <button type="submit" class="rounded-button primary">S'inscrire</button>
+                <button type="button" id="cancelSignup" class="rounded-button secondary">Annuler Inscription</button>
+                <div id="signupErrorMessage" class="error-message hidden"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DACAPO - Votre répertoire musical</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
