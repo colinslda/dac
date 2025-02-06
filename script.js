@@ -1,6 +1,6 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
-import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
-import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, setDoc } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js'; // Mise à jour version Firebase
+import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js'; // Mise à jour version Firebase
+import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, setDoc } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js'; // Mise à jour version Firebase
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,14 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoriesRepertoireDiv = document.getElementById('categoriesRepertoire');
 
     // --- Firebase Configuration ---
-    // Remplacer par VOTRE configuration Firebase (voir instructions plus bas)
+    // Configuration Firebase mise à jour AVEC VOS INFORMATIONS
     const firebaseConfig = {
-        apiKey: "VOTRE_API_KEY",
-        authDomain: "VOTRE_AUTH_DOMAIN",
-        projectId: "VOTRE_PROJECT_ID",
-        storageBucket: "VOTRE_STORAGE_BUCKET",
-        messagingSenderId: "VOTRE_MESSAGING_SENDER_ID",
-        appId: "VOTRE_APP_ID"
+        apiKey: "AIzaSyCBJwF-jRCcVCJPPFTuLONaoHL4aWWzo00",
+        authDomain: "dacapo-fe973.firebaseapp.com",
+        projectId: "dacapo-fe973",
+        storageBucket: "dacapo-fe973.firebasestorage.app",
+        messagingSenderId: "740304498836",
+        appId: "1:740304498836:web:2de8d160157f81c4db0481",
+        measurementId: "G-99H7ZTTR1P"
     };
 
     const app = initializeApp(firebaseConfig);
